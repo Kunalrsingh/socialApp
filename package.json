@@ -4,7 +4,7 @@
   "description": "a basic social media app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "express",
