@@ -54,6 +54,23 @@ paths:
                   type: string
                   follows:
                   type: string
+ /facebook:
+    get:
+     summary: returns username, followers, following
+     responses:
+      '200': # status code
+        description: returns an object 
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                 type: string
+                freinds:
+                 type: string
+                post:
+                 type: string
  /{token}:
     get:
       summary: returns whatever is in there parameter
@@ -72,5 +89,31 @@ paths:
                 type: object
                 properties:
                   params:
+                   type: string
+ /{id}:
+    get:
+      summary: returns whatever is in there parameter
+      parameters:
+        - name: token
+          default: 5
+          in: path
+          schema:
+            type: string
+        - name: id
+          default: 6
+          in: path
+          schema:
+            type: string
+      responses:
+        '200': # status code
+          description: returns an object 
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  param1:
+                   type: string
+                  param2:
                    type: string
                  
